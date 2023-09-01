@@ -1,0 +1,491 @@
+{
+	"info": {
+		"_postman_id": "db834642-c029-455e-949d-6127942713d5",
+		"name": "Final Doctor",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2RvY3Rvci9sb2dpbiIsImlhdCI6MTY5MjM0MzcxNywiZXhwIjoxNjkyMzQ3MzE3LCJuYmYiOjE2OTIzNDM3MTcsImp0aSI6InB2RlpJME5SZ213N2dYc2giLCJzdWIiOiIyIiwicHJ2IjoiZTE0Nzg3YWFiNjY2ODhjZTA2YzQ3MTJlNjczZTFhMWM0NGY0OTA5NCJ9.397HBPx2FI_gihVPaMVJzlbUDNuxFgtJBZFYaF9exmo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "khaled@gmail.com",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/doctor/dashboard/create_order/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"doctor",
+						"dashboard",
+						"create_order",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2RvY3Rvci9sb2dpbiIsImlhdCI6MTY4NTA4MzE0NywiZXhwIjoxNjg1MDg2NzQ3LCJuYmYiOjE2ODUwODMxNDcsImp0aSI6IlZZekx3NlA0MTNlaGVGcmMiLCJzdWIiOiIyIiwicHJ2IjoiZTE0Nzg3YWFiNjY2ODhjZTA2YzQ3MTJlNjczZTFhMWM0NGY0OTA5NCJ9.IiD_jg5P3GHuOPKNUeodl9fOJE4TYg6Yl1M8p9wY_8k",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/doctor/dashboard/logout",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"doctor",
+						"dashboard",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "location_id",
+							"value": "2",
+							"type": "default"
+						},
+						{
+							"key": "doctor_address",
+							"value": "park",
+							"type": "default"
+						},
+						{
+							"key": "doctor_name",
+							"value": "Khaled",
+							"type": "default"
+						},
+						{
+							"key": "email",
+							"value": "khaled@gmail.com",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "default"
+						},
+						{
+							"key": "doctor_phone",
+							"value": "0945245",
+							"type": "default"
+						},
+						{
+							"key": "doctor_description",
+							"value": "teeth",
+							"type": "default"
+						},
+						{
+							"key": "doctor_image",
+							"value": "khaled.png",
+							"type": "default"
+						},
+						{
+							"key": "d_image",
+							"value": "khaled_d.png",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/doctor/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"doctor",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Dashboard",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2RvY3Rvci9sb2dpbiIsImlhdCI6MTY4NTA4MzE0NywiZXhwIjoxNjg1MDg2NzQ3LCJuYmYiOjE2ODUwODMxNDcsImp0aSI6IlZZekx3NlA0MTNlaGVGcmMiLCJzdWIiOiIyIiwicHJ2IjoiZTE0Nzg3YWFiNjY2ODhjZTA2YzQ3MTJlNjczZTFhMWM0NGY0OTA5NCJ9.IiD_jg5P3GHuOPKNUeodl9fOJE4TYg6Yl1M8p9wY_8k",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/doctor/dashboard",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"doctor",
+						"dashboard"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit Profile",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "doctor_name",
+							"value": "",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "",
+							"type": "default"
+						},
+						{
+							"key": "doctor_phone",
+							"value": "",
+							"type": "default"
+						},
+						{
+							"key": "doctor_description",
+							"value": "",
+							"type": "default"
+						},
+						{
+							"key": "old_password",
+							"value": "",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/doctor/dashboard/edit_doctor",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"doctor",
+						"dashboard",
+						"edit_doctor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Clients",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2RvY3Rvci9sb2dpbiIsImlhdCI6MTY4NTI2MzUzNywiZXhwIjoxNjg1MjY3MTM3LCJuYmYiOjE2ODUyNjM1MzcsImp0aSI6InA5cFZ4U2Fzd1BUcWxOYkMiLCJzdWIiOiIyIiwicHJ2IjoiZTE0Nzg3YWFiNjY2ODhjZTA2YzQ3MTJlNjczZTFhMWM0NGY0OTA5NCJ9.4nuXJz_No0Dy6Ejs-7gigFpT4OwSNSTW3vAiTWPa4do",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/doctor/dashboard/get_clients/3",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"doctor",
+						"dashboard",
+						"get_clients",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Doctor Create Report",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/doctor/dashboard/make_report/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"doctor",
+						"dashboard",
+						"make_report",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Doctor Create Order",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2RvY3Rvci9sb2dpbiIsImlhdCI6MTY5MjM4MTI2MiwiZXhwIjoxNjkyMzg0ODYyLCJuYmYiOjE2OTIzODEyNjIsImp0aSI6Ik1YN1Rucml5cWJMeFZrQ2QiLCJzdWIiOiI0IiwicHJ2IjoiZTE0Nzg3YWFiNjY2ODhjZTA2YzQ3MTJlNjczZTFhMWM0NGY0OTA5NCJ9.iYo0lCxebHCgJjBcx-Ur2_lheRaqxc89rWAeSWyvXro",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "co_description",
+							"value": "nothing",
+							"type": "default"
+						},
+						{
+							"key": "address",
+							"value": "damascus",
+							"type": "default"
+						},
+						{
+							"key": "is_delivery",
+							"value": "0",
+							"type": "default"
+						},
+						{
+							"key": "client_id",
+							"value": "4",
+							"type": "default"
+						},
+						{
+							"key": "cdelivery",
+							"value": "1",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/doctor/dashboard/create_order/5",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"doctor",
+						"dashboard",
+						"create_order",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Doctor Add Order Item",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2RvY3Rvci9sb2dpbiIsImlhdCI6MTY5MjM4MTI2MiwiZXhwIjoxNjkyMzg0ODYyLCJuYmYiOjE2OTIzODEyNjIsImp0aSI6Ik1YN1Rucml5cWJMeFZrQ2QiLCJzdWIiOiI0IiwicHJ2IjoiZTE0Nzg3YWFiNjY2ODhjZTA2YzQ3MTJlNjczZTFhMWM0NGY0OTA5NCJ9.iYo0lCxebHCgJjBcx-Ur2_lheRaqxc89rWAeSWyvXro",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "material_id",
+							"value": "2",
+							"type": "default"
+						},
+						{
+							"key": "quantity",
+							"value": "4",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/doctor/dashboard/add_order_item/5",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"doctor",
+						"dashboard",
+						"add_order_item",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Doctor Get Orders",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2RvY3Rvci9sb2dpbiIsImlhdCI6MTY5MjM0NDcyOCwiZXhwIjoxNjkyMzQ4MzI4LCJuYmYiOjE2OTIzNDQ3MjgsImp0aSI6ImZaeEE3VDhYeFlPaVpYejkiLCJzdWIiOiIyIiwicHJ2IjoiZTE0Nzg3YWFiNjY2ODhjZTA2YzQ3MTJlNjczZTFhMWM0NGY0OTA5NCJ9.xDwz-YEGOkBMxljVHJSOcqeuCX2GlyrsrX0QrGuPeok",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "material_id",
+							"value": "1",
+							"type": "default"
+						},
+						{
+							"key": "quantity",
+							"value": "10",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/doctor/dashboard/get_orders/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"doctor",
+						"dashboard",
+						"get_orders",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

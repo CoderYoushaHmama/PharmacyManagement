@@ -1,0 +1,1394 @@
+{
+	"info": {
+		"_postman_id": "18c00571-ceea-4fa1-9b68-796442881804",
+		"name": "Final Company",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "location_id",
+							"value": "3",
+							"type": "default"
+						},
+						{
+							"key": "company_name",
+							"value": "Ibn sena",
+							"type": "default"
+						},
+						{
+							"key": "company_phone",
+							"value": "0947812",
+							"type": "default"
+						},
+						{
+							"key": "email",
+							"value": "ibn_sena@gmail.com",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "default"
+						},
+						{
+							"key": "company_owner",
+							"value": "Omar",
+							"type": "default"
+						},
+						{
+							"key": "establishment_no",
+							"value": "654215",
+							"type": "default"
+						},
+						{
+							"key": "company_image",
+							"value": "imn_sena_image.png",
+							"type": "default"
+						},
+						{
+							"key": "line_phone",
+							"value": "01175624",
+							"type": "default"
+						},
+						{
+							"key": "es_image",
+							"value": "ibn_sena_es_image.png",
+							"type": "default"
+						},
+						{
+							"key": "company_address",
+							"value": "near alnaser mole",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/company/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"company",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "tameco@gmail.com",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/company/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"company",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Profile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2NvbXBhbnkvbG9naW4iLCJpYXQiOjE2ODM2MjY4MjcsImV4cCI6MTY4MzYzMDQyNywibmJmIjoxNjgzNjI2ODI3LCJqdGkiOiJEUGxuV0VmcHBJU2YzZUdwIiwic3ViIjoiNSIsInBydiI6ImNmZTdlYzk5YTIzZjQzODhlN2YxZDVmYjg3MDgzNzVjODU0ZWRhNjQifQ.AXnVT9QoJpHOEvVAMkEszcp1Z4JKpdSxz7sykwyj70Y",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2NvbXBhbnkvbG9naW4iLCJpYXQiOjE2ODI3NDY2MjgsImV4cCI6MTY4Mjc1MDIyOCwibmJmIjoxNjgyNzQ2NjI4LCJqdGkiOiJ5eXdWT2VuNTVnRjdUUE1KIiwic3ViIjoiNSIsInBydiI6ImNmZTdlYzk5YTIzZjQzODhlN2YxZDVmYjg3MDgzNzVjODU0ZWRhNjQifQ.fi2C164qY3V3fYUdpafkVNuOAPKb_vuqwpXmMjRyL7Y",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/company/dashboard",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"company",
+						"dashboard"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit Profile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2NvbXBhbnkvbG9naW4iLCJpYXQiOjE2ODM2MjY4MjcsImV4cCI6MTY4MzYzMDQyNywibmJmIjoxNjgzNjI2ODI3LCJqdGkiOiJEUGxuV0VmcHBJU2YzZUdwIiwic3ViIjoiNSIsInBydiI6ImNmZTdlYzk5YTIzZjQzODhlN2YxZDVmYjg3MDgzNzVjODU0ZWRhNjQifQ.AXnVT9QoJpHOEvVAMkEszcp1Z4JKpdSxz7sykwyj70Y",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "location_id",
+							"value": "2",
+							"type": "default",
+							"disabled": true
+						},
+						{
+							"key": "company_name",
+							"value": "Cita",
+							"type": "default",
+							"disabled": true
+						},
+						{
+							"key": "company_phone",
+							"value": "061588779452",
+							"type": "default"
+						},
+						{
+							"key": "email",
+							"value": "banad@gmail.com",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "1231231234",
+							"type": "default"
+						},
+						{
+							"key": "company_owner",
+							"value": "Abd Allah5",
+							"type": "default"
+						},
+						{
+							"key": "establishment_no",
+							"value": "some thing",
+							"type": "default",
+							"disabled": true
+						},
+						{
+							"key": "company_image",
+							"value": "image.png",
+							"type": "default"
+						},
+						{
+							"key": "old_password",
+							"value": "123123123",
+							"type": "default"
+						},
+						{
+							"key": "company_address",
+							"value": "park",
+							"type": "default",
+							"disabled": true
+						},
+						{
+							"key": "line_phone",
+							"value": "454545",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/company/dashboard/edit_company",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"company",
+						"dashboard",
+						"edit_company"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2NvbXBhbnkvbG9naW4iLCJpYXQiOjE2ODQxMzUyMzEsImV4cCI6MTY4NDEzODgzMSwibmJmIjoxNjg0MTM1MjMxLCJqdGkiOiJET28wYU50ZEZCU0ZpUUlNIiwic3ViIjoiMiIsInBydiI6ImNmZTdlYzk5YTIzZjQzODhlN2YxZDVmYjg3MDgzNzVjODU0ZWRhNjQifQ.-DRJ2HkRDcmo5M8fM3X7T0zMLx2Ec73KhIwbXXBoycY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/company/dashboard/logout",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"company",
+						"dashboard",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Supplier",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2NvbXBhbnkvbG9naW4iLCJpYXQiOjE2OTIzNzkzMjMsImV4cCI6MTY5MjM4MjkyMywibmJmIjoxNjkyMzc5MzIzLCJqdGkiOiJ3TFI2QWZpYWl4NGdMcGk4Iiwic3ViIjoiMiIsInBydiI6ImNmZTdlYzk5YTIzZjQzODhlN2YxZDVmYjg3MDgzNzVjODU0ZWRhNjQifQ.h1cwbvdssanw7cWJYxAHxUYe-g3dosJOGOVKlsDTumU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "location_id",
+							"value": "2",
+							"type": "default"
+						},
+						{
+							"key": "supplier_name",
+							"value": "Ali",
+							"type": "default"
+						},
+						{
+							"key": "supplier_image",
+							"value": "ali_image.png",
+							"type": "default"
+						},
+						{
+							"key": "supplier_phone",
+							"value": "0952542",
+							"type": "default"
+						},
+						{
+							"key": "supplier_description",
+							"value": "supplier for medicines",
+							"type": "default"
+						},
+						{
+							"key": "supplier_address",
+							"value": "near park",
+							"type": "default"
+						},
+						{
+							"key": "national_number",
+							"value": "1454513",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/company/dashboard/add_supplier",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"company",
+						"dashboard",
+						"add_supplier"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Suppliers",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2NvbXBhbnkvbG9naW4iLCJpYXQiOjE2ODQxMzYzMzUsImV4cCI6MTY4NDEzOTkzNSwibmJmIjoxNjg0MTM2MzM1LCJqdGkiOiJMOElJMkFsbTFMZTFVak9SIiwic3ViIjoiMSIsInBydiI6ImNmZTdlYzk5YTIzZjQzODhlN2YxZDVmYjg3MDgzNzVjODU0ZWRhNjQifQ.cQaRjkSugme1Ah91HopfFvsGZ2_ockN1zlMEq5fAf0c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/company/dashboard/get_supplier",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"company",
+						"dashboard",
+						"get_supplier"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit Supplier",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2NvbXBhbnkvbG9naW4iLCJpYXQiOjE2ODMyMTgyMjUsImV4cCI6MTY4MzIyMTgyNSwibmJmIjoxNjgzMjE4MjI1LCJqdGkiOiJoYmVxano5OGtUcDA3WFFWIiwic3ViIjoiNiIsInBydiI6ImNmZTdlYzk5YTIzZjQzODhlN2YxZDVmYjg3MDgzNzVjODU0ZWRhNjQifQ.PHGbvALso7eSliSXAOVaU5BrlHn24xy8mKq9CfLfd30",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "location_id",
+							"value": "2",
+							"type": "default",
+							"disabled": true
+						},
+						{
+							"key": "supplier_name",
+							"value": "Mohammad2",
+							"type": "default"
+						},
+						{
+							"key": "supplier_image",
+							"value": "10044.png",
+							"type": "default"
+						},
+						{
+							"key": "supplier_phone",
+							"value": "09878554512",
+							"type": "default"
+						},
+						{
+							"key": "supplier_description",
+							"value": "supplier for medicines",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/company/dashboard/edit_supplier/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"company",
+						"dashboard",
+						"edit_supplier",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove Supplier",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2NvbXBhbnkvbG9naW4iLCJpYXQiOjE2ODMyMTgyMjUsImV4cCI6MTY4MzIyMTgyNSwibmJmIjoxNjgzMjE4MjI1LCJqdGkiOiJoYmVxano5OGtUcDA3WFFWIiwic3ViIjoiNiIsInBydiI6ImNmZTdlYzk5YTIzZjQzODhlN2YxZDVmYjg3MDgzNzVjODU0ZWRhNjQifQ.PHGbvALso7eSliSXAOVaU5BrlHn24xy8mKq9CfLfd30",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/company/dashboard/remove_supplier/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"company",
+						"dashboard",
+						"remove_supplier",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Material",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2NvbXBhbnkvbG9naW4iLCJpYXQiOjE2OTIzNjcyNDYsImV4cCI6MTY5MjM3MDg0NiwibmJmIjoxNjkyMzY3MjQ2LCJqdGkiOiJwMEY1RHdiczQ5UFU5Z1pEIiwic3ViIjoiMSIsInBydiI6ImNmZTdlYzk5YTIzZjQzODhlN2YxZDVmYjg3MDgzNzVjODU0ZWRhNjQifQ.bYgfKvzQuVd9FyRLUKKm9s0gzwfYb6Nd5aiTgsNEdWA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "type_id",
+							"value": "3",
+							"type": "default"
+						},
+						{
+							"key": "material_name",
+							"value": "Zrnech",
+							"type": "default"
+						},
+						{
+							"key": "material_image",
+							"value": "banadool.jpeg",
+							"type": "default"
+						},
+						{
+							"key": "price_pharmacy",
+							"value": "3500",
+							"type": "default"
+						},
+						{
+							"key": "price_sell",
+							"value": "5080",
+							"type": "default"
+						},
+						{
+							"key": "qr_code",
+							"value": "2667415",
+							"type": "default"
+						},
+						{
+							"key": "license_image",
+							"value": "zrnech.png",
+							"type": "default"
+						},
+						{
+							"key": "scientific_name",
+							"value": "Zrnech",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/company/dashboard/add_material",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"company",
+						"dashboard",
+						"add_material"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Component To Material",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2NvbXBhbnkvbG9naW4iLCJpYXQiOjE2OTIzNzAyODcsImV4cCI6MTY5MjM3Mzg4NywibmJmIjoxNjkyMzcwMjg3LCJqdGkiOiI0MllVSEJHV2dJOU00UUhCIiwic3ViIjoiMiIsInBydiI6ImNmZTdlYzk5YTIzZjQzODhlN2YxZDVmYjg3MDgzNzVjODU0ZWRhNjQifQ.qRjW2K0Ld6e654jPIZR3H47y0puNv7TdJltg07g39CI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "component_id",
+							"value": "3",
+							"type": "default"
+						},
+						{
+							"key": "component_quantity",
+							"value": "4.6",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/company/dashboard/add_component/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"company",
+						"dashboard",
+						"add_component",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Disease To Material",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2NvbXBhbnkvbG9naW4iLCJpYXQiOjE2OTIzNjkwMzksImV4cCI6MTY5MjM3MjYzOSwibmJmIjoxNjkyMzY5MDM5LCJqdGkiOiJIOXRkSmJXT0F3M3NIN2o2Iiwic3ViIjoiNSIsInBydiI6ImNmZTdlYzk5YTIzZjQzODhlN2YxZDVmYjg3MDgzNzVjODU0ZWRhNjQifQ.k3xymZ7DDKxDwYwhuTVZoPFKTvQiy5QKyK7lvQZO6jI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "disease_id",
+							"value": "1",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/company/dashboard/add_disease/8",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"company",
+						"dashboard",
+						"add_disease",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Batch To Material",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2NvbXBhbnkvbG9naW4iLCJpYXQiOjE2OTIzNzE2NjAsImV4cCI6MTY5MjM3NTI2MCwibmJmIjoxNjkyMzcxNjYwLCJqdGkiOiJtMFdXTFhhTFVKNk53ZDZSIiwic3ViIjoiNSIsInBydiI6ImNmZTdlYzk5YTIzZjQzODhlN2YxZDVmYjg3MDgzNzVjODU0ZWRhNjQifQ.uGgjl8j_ZgEfLvkkx8aYD3unNRguqktmZNGFbFyHFvI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "batch",
+							"value": "1300",
+							"type": "default"
+						},
+						{
+							"key": "quantity",
+							"value": "160",
+							"type": "default"
+						},
+						{
+							"key": "expiry_date",
+							"value": "2026-2-5",
+							"type": "default"
+						},
+						{
+							"key": "description",
+							"value": "no description",
+							"type": "default"
+						},
+						{
+							"key": "is_active",
+							"value": "1",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/company/dashboard/add_batch/8",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"company",
+						"dashboard",
+						"add_batch",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Activate Disactive Batch",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2NvbXBhbnkvbG9naW4iLCJpYXQiOjE2ODQxMzYzMzUsImV4cCI6MTY4NDEzOTkzNSwibmJmIjoxNjg0MTM2MzM1LCJqdGkiOiJMOElJMkFsbTFMZTFVak9SIiwic3ViIjoiMSIsInBydiI6ImNmZTdlYzk5YTIzZjQzODhlN2YxZDVmYjg3MDgzNzVjODU0ZWRhNjQifQ.cQaRjkSugme1Ah91HopfFvsGZ2_ockN1zlMEq5fAf0c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/company/dashboard/batch_activate_disactive/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"company",
+						"dashboard",
+						"batch_activate_disactive",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Materials",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2NvbXBhbnkvbG9naW4iLCJpYXQiOjE2ODQxMzYzMzUsImV4cCI6MTY4NDEzOTkzNSwibmJmIjoxNjg0MTM2MzM1LCJqdGkiOiJMOElJMkFsbTFMZTFVak9SIiwic3ViIjoiMSIsInBydiI6ImNmZTdlYzk5YTIzZjQzODhlN2YxZDVmYjg3MDgzNzVjODU0ZWRhNjQifQ.cQaRjkSugme1Ah91HopfFvsGZ2_ockN1zlMEq5fAf0c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/company/dashboard/get_materials",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"company",
+						"dashboard",
+						"get_materials"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit Material",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2NvbXBhbnkvbG9naW4iLCJpYXQiOjE2ODMyMTM4NjUsImV4cCI6MTY4MzIxNzQ2NSwibmJmIjoxNjgzMjEzODY1LCJqdGkiOiJ2NDhORXM2OXE2algxc3JBIiwic3ViIjoiNiIsInBydiI6ImNmZTdlYzk5YTIzZjQzODhlN2YxZDVmYjg3MDgzNzVjODU0ZWRhNjQifQ.6q6VlI_rP6e51ANN-Lk_FzvpZk1MVzz3QjO0OstA028",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "type_id",
+							"value": "1",
+							"type": "default",
+							"disabled": true
+						},
+						{
+							"key": "material_name",
+							"value": "Bandatelok",
+							"type": "default",
+							"disabled": true
+						},
+						{
+							"key": "material_image",
+							"value": "bandaimage.png",
+							"type": "default",
+							"disabled": true
+						},
+						{
+							"key": "price_pharmacy",
+							"value": "3500",
+							"type": "default"
+						},
+						{
+							"key": "price_sell",
+							"value": "4100",
+							"type": "default"
+						},
+						{
+							"key": "qr_code",
+							"value": "1245647",
+							"type": "default",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/company/dashboard/edit_material/8",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"company",
+						"dashboard",
+						"edit_material",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Batchs Of Material",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2NvbXBhbnkvbG9naW4iLCJpYXQiOjE2ODQxNDA0MDcsImV4cCI6MTY4NDE0NDAwNywibmJmIjoxNjg0MTQwNDA3LCJqdGkiOiJqMjdQSTZDT0psaFJiaXpzIiwic3ViIjoiMSIsInBydiI6ImNmZTdlYzk5YTIzZjQzODhlN2YxZDVmYjg3MDgzNzVjODU0ZWRhNjQifQ.SdHJ_sqH09CUjmoXqLdsVyq5RAUtDDribhlV7I-UTy0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/company/dashboard/get_batchs/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"company",
+						"dashboard",
+						"get_batchs",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Active Materials",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2NvbXBhbnkvbG9naW4iLCJpYXQiOjE2ODQxNDQwMjUsImV4cCI6MTY4NDE0NzYyNSwibmJmIjoxNjg0MTQ0MDI1LCJqdGkiOiJNN1ZaUkV6YUlUQXdLSm8zIiwic3ViIjoiMSIsInBydiI6ImNmZTdlYzk5YTIzZjQzODhlN2YxZDVmYjg3MDgzNzVjODU0ZWRhNjQifQ.BhBTeFHN2VQe_oKGaM3AE3rgkqe-eo8glF7STWVPuRc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/company/dashboard/get_active_materials",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"company",
+						"dashboard",
+						"get_active_materials"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Supplier Information",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2NvbXBhbnkvbG9naW4iLCJpYXQiOjE2ODQyMzIwMjAsImV4cCI6MTY4NDIzNTYyMCwibmJmIjoxNjg0MjMyMDIwLCJqdGkiOiJnQVVFVHJTM2tERERlYUUzIiwic3ViIjoiMSIsInBydiI6ImNmZTdlYzk5YTIzZjQzODhlN2YxZDVmYjg3MDgzNzVjODU0ZWRhNjQifQ.cf0qRoYBPj7YPm_5BUXAwMJHmldnH5nCZypHSt768DA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/company/dashboard/get_supplier/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"company",
+						"dashboard",
+						"get_supplier",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Supplier By Name",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2NvbXBhbnkvbG9naW4iLCJpYXQiOjE2ODQxNjM2NzMsImV4cCI6MTY4NDE2NzI3MywibmJmIjoxNjg0MTYzNjczLCJqdGkiOiJ6MVB1QWp0czcwZ05XOUNqIiwic3ViIjoiMSIsInBydiI6ImNmZTdlYzk5YTIzZjQzODhlN2YxZDVmYjg3MDgzNzVjODU0ZWRhNjQifQ.3_a53tkGOSdapneXMwpVKmkaaYcwIr_yNeIMrCtRhHA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/company/dashboard/search_supplier/?supplier_name=Ah",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"company",
+						"dashboard",
+						"search_supplier",
+						""
+					],
+					"query": [
+						{
+							"key": "supplier_name",
+							"value": "Ah"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Active Material Information",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2NvbXBhbnkvbG9naW4iLCJpYXQiOjE2ODQxNjM2NzMsImV4cCI6MTY4NDE2NzI3MywibmJmIjoxNjg0MTYzNjczLCJqdGkiOiJ6MVB1QWp0czcwZ05XOUNqIiwic3ViIjoiMSIsInBydiI6ImNmZTdlYzk5YTIzZjQzODhlN2YxZDVmYjg3MDgzNzVjODU0ZWRhNjQifQ.3_a53tkGOSdapneXMwpVKmkaaYcwIr_yNeIMrCtRhHA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/company/dashboard/get_active_materials/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"company",
+						"dashboard",
+						"get_active_materials",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Active Materials",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2NvbXBhbnkvbG9naW4iLCJpYXQiOjE2ODQxNjM2NzMsImV4cCI6MTY4NDE2NzI3MywibmJmIjoxNjg0MTYzNjczLCJqdGkiOiJ6MVB1QWp0czcwZ05XOUNqIiwic3ViIjoiMSIsInBydiI6ImNmZTdlYzk5YTIzZjQzODhlN2YxZDVmYjg3MDgzNzVjODU0ZWRhNjQifQ.3_a53tkGOSdapneXMwpVKmkaaYcwIr_yNeIMrCtRhHA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/company/dashboard/get_active_materials",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"company",
+						"dashboard",
+						"get_active_materials"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Disactive Materials",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2NvbXBhbnkvbG9naW4iLCJpYXQiOjE2ODQxNjM2NzMsImV4cCI6MTY4NDE2NzI3MywibmJmIjoxNjg0MTYzNjczLCJqdGkiOiJ6MVB1QWp0czcwZ05XOUNqIiwic3ViIjoiMSIsInBydiI6ImNmZTdlYzk5YTIzZjQzODhlN2YxZDVmYjg3MDgzNzVjODU0ZWRhNjQifQ.3_a53tkGOSdapneXMwpVKmkaaYcwIr_yNeIMrCtRhHA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/company/dashboard/get_disactive_materials",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"company",
+						"dashboard",
+						"get_disactive_materials"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Material Batch Information",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2NvbXBhbnkvbG9naW4iLCJpYXQiOjE2ODQyMzIwMjAsImV4cCI6MTY4NDIzNTYyMCwibmJmIjoxNjg0MjMyMDIwLCJqdGkiOiJnQVVFVHJTM2tERERlYUUzIiwic3ViIjoiMSIsInBydiI6ImNmZTdlYzk5YTIzZjQzODhlN2YxZDVmYjg3MDgzNzVjODU0ZWRhNjQifQ.cf0qRoYBPj7YPm_5BUXAwMJHmldnH5nCZypHSt768DA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/company/dashboard/get_material_information/1/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"company",
+						"dashboard",
+						"get_material_information",
+						"1",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Disactive Material Information",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2NvbXBhbnkvbG9naW4iLCJpYXQiOjE2ODQyMzIwMjAsImV4cCI6MTY4NDIzNTYyMCwibmJmIjoxNjg0MjMyMDIwLCJqdGkiOiJnQVVFVHJTM2tERERlYUUzIiwic3ViIjoiMSIsInBydiI6ImNmZTdlYzk5YTIzZjQzODhlN2YxZDVmYjg3MDgzNzVjODU0ZWRhNjQifQ.cf0qRoYBPj7YPm_5BUXAwMJHmldnH5nCZypHSt768DA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/company/dashboard/get_disactive_materials/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"company",
+						"dashboard",
+						"get_disactive_materials",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Material Information",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2NvbXBhbnkvbG9naW4iLCJpYXQiOjE2ODQyMzIwMjAsImV4cCI6MTY4NDIzNTYyMCwibmJmIjoxNjg0MjMyMDIwLCJqdGkiOiJnQVVFVHJTM2tERERlYUUzIiwic3ViIjoiMSIsInBydiI6ImNmZTdlYzk5YTIzZjQzODhlN2YxZDVmYjg3MDgzNzVjODU0ZWRhNjQifQ.cf0qRoYBPj7YPm_5BUXAwMJHmldnH5nCZypHSt768DA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/company/dashboard/get_material_information/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"company",
+						"dashboard",
+						"get_material_information",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Copany Reject Order",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2NvbXBhbnkvbG9naW4iLCJpYXQiOjE2ODMzNDY5ODMsImV4cCI6MTY4MzM1MDU4MywibmJmIjoxNjgzMzQ2OTgzLCJqdGkiOiJEanJaNDdsV0ZQaHZnN3ZhIiwic3ViIjoiNiIsInBydiI6ImNmZTdlYzk5YTIzZjQzODhlN2YxZDVmYjg3MDgzNzVjODU0ZWRhNjQifQ.ODGHjzGLfeU8NGSnjqCqv3RA17biM0Chvu4TBtYF9aE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "mes_company",
+							"value": "not enought",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/company/dashboard/reject_order/4",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"company",
+						"dashboard",
+						"reject_order",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Company Accept Order",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2NvbXBhbnkvbG9naW4iLCJpYXQiOjE2ODMzNDY5ODMsImV4cCI6MTY4MzM1MDU4MywibmJmIjoxNjgzMzQ2OTgzLCJqdGkiOiJEanJaNDdsV0ZQaHZnN3ZhIiwic3ViIjoiNiIsInBydiI6ImNmZTdlYzk5YTIzZjQzODhlN2YxZDVmYjg3MDgzNzVjODU0ZWRhNjQifQ.ODGHjzGLfeU8NGSnjqCqv3RA17biM0Chvu4TBtYF9aE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "mes_company",
+							"value": "now we can ",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/company/dashboard/accept_order/4",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"company",
+						"dashboard",
+						"accept_order",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Company Create Report",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/company/dashboard/make_report/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"company",
+						"dashboard",
+						"make_report",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

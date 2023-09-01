@@ -1,0 +1,438 @@
+{
+	"info": {
+		"_postman_id": "f4906071-cf13-48b2-9049-e76ff6bff1e8",
+		"name": "Final Client",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Client Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "location_id",
+							"value": "2",
+							"type": "default"
+						},
+						{
+							"key": "client_name",
+							"value": "Reem",
+							"type": "default"
+						},
+						{
+							"key": "email",
+							"value": "reem@gmail.com",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "default"
+						},
+						{
+							"key": "client_phone",
+							"value": "0952545",
+							"type": "default"
+						},
+						{
+							"key": "client_description",
+							"value": "I am client",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/client/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"client",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Client Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "ali@gmail.com",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/client/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"client",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Client Dashboard",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2NsaWVudC9sb2dpbiIsImlhdCI6MTY4NDA2NTc3MiwiZXhwIjoxNjg0MDY5MzcyLCJuYmYiOjE2ODQwNjU3NzIsImp0aSI6IjFoa0VYSEI2MzVoWjdySzAiLCJzdWIiOiIxIiwicHJ2IjoiNDFlZmI3YmFkN2Y2ZjYzMmUyNDA1YmQzYTc5M2I4YTZiZGVjNjc3NyJ9.iejEJ24dZpA8-zRW6viLirn5h3R8KsU7XBJB9LdD-ZY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/client/dashboard",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"client",
+						"dashboard"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Client Logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2NsaWVudC9sb2dpbiIsImlhdCI6MTY4NDA2NTc3MiwiZXhwIjoxNjg0MDY5MzcyLCJuYmYiOjE2ODQwNjU3NzIsImp0aSI6IjFoa0VYSEI2MzVoWjdySzAiLCJzdWIiOiIxIiwicHJ2IjoiNDFlZmI3YmFkN2Y2ZjYzMmUyNDA1YmQzYTc5M2I4YTZiZGVjNjc3NyJ9.iejEJ24dZpA8-zRW6viLirn5h3R8KsU7XBJB9LdD-ZY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/client/dashboard/logout",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"client",
+						"dashboard",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Client Edit Profile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2NsaWVudC9sb2dpbiIsImlhdCI6MTY4NDA4ODI0MSwiZXhwIjoxNjg0MDkxODQxLCJuYmYiOjE2ODQwODgyNDEsImp0aSI6IkFLZnpQWXVjU0labXNIaUgiLCJzdWIiOiIxIiwicHJ2IjoiNDFlZmI3YmFkN2Y2ZjYzMmUyNDA1YmQzYTc5M2I4YTZiZGVjNjc3NyJ9.XNgoCwSsCbl4xfjj4Qo36PI-bwJGhPcIAXubKKvBxyI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "location_id",
+							"value": "2",
+							"type": "default"
+						},
+						{
+							"key": "client_name",
+							"value": "Mousa",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "111222000",
+							"type": "default"
+						},
+						{
+							"key": "client_phone",
+							"value": "0945145316",
+							"type": "default"
+						},
+						{
+							"key": "client_description",
+							"value": "I am client",
+							"type": "default"
+						},
+						{
+							"key": "old_password",
+							"value": "111222000",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/client/dashboard/edit_client",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"client",
+						"dashboard",
+						"edit_client"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Rating Pharmacy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/client/dashboard/rating/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"client",
+						"dashboard",
+						"rating",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Client Create Report",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/client/dashboard/make_report/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"client",
+						"dashboard",
+						"make_report",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Client Get Orders",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2NsaWVudC9sb2dpbiIsImlhdCI6MTY5MjM0NDk0MywiZXhwIjoxNjkyMzQ4NTQzLCJuYmYiOjE2OTIzNDQ5NDMsImp0aSI6InFOOFRndGlPUzFOSjRjd04iLCJzdWIiOiI0IiwicHJ2IjoiNDFlZmI3YmFkN2Y2ZjYzMmUyNDA1YmQzYTc5M2I4YTZiZGVjNjc3NyJ9.W7mT1tor_XQeLcH3QwljufoSC0J6pCcGI_Eo3JbKQc4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/client/dashboard/get_orders",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"client",
+						"dashboard",
+						"get_orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Client Get Order Items",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2NsaWVudC9sb2dpbiIsImlhdCI6MTY5MjM0NDYxNiwiZXhwIjoxNjkyMzQ4MjE2LCJuYmYiOjE2OTIzNDQ2MTYsImp0aSI6InE3VnBrRFlqbkM2S25naUIiLCJzdWIiOiI0IiwicHJ2IjoiNDFlZmI3YmFkN2Y2ZjYzMmUyNDA1YmQzYTc5M2I4YTZiZGVjNjc3NyJ9.eghn1ooCby7KLTvWGC7gqaTlDOOVbkbyzA1CKva2pt8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/client/dashboard/get_order_items/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"client",
+						"dashboard",
+						"get_order_items",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Client Rating Pharmacy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2NsaWVudC9sb2dpbiIsImlhdCI6MTY5MjM3OTU5MywiZXhwIjoxNjkyMzgzMTkzLCJuYmYiOjE2OTIzNzk1OTMsImp0aSI6Ik1sbnMzVWtwdjN3MHpIZlciLCJzdWIiOiIyIiwicHJ2IjoiNDFlZmI3YmFkN2Y2ZjYzMmUyNDA1YmQzYTc5M2I4YTZiZGVjNjc3NyJ9.r_j2nKCv2oohe8Cp-YVjMZKpCSvyxYY3AbBoceJeRuA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "rate",
+							"value": "4",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/client/dashboard/rating/5",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"client",
+						"dashboard",
+						"rating",
+						"5"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer"
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

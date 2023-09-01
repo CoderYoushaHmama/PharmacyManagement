@@ -1,0 +1,2477 @@
+{
+	"info": {
+		"_postman_id": "187ba921-9288-4faa-83bc-c7dcf46ee575",
+		"name": "Final Pharmacy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "7duzJN3DoR2JkOdEjwC25zPu5BpZLruTA3t26J01",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "location_id",
+							"value": "1",
+							"type": "default"
+						},
+						{
+							"key": "pharmacy_name",
+							"value": "Nsren",
+							"type": "default"
+						},
+						{
+							"key": "pharmacy_email",
+							"value": "nsren@gmail.com",
+							"type": "default"
+						},
+						{
+							"key": "pharmacy_password",
+							"value": "123456",
+							"type": "default"
+						},
+						{
+							"key": "pharmacy_phone",
+							"value": "0956566",
+							"type": "default"
+						},
+						{
+							"key": "pharmacy_image",
+							"value": "nsren_image.png",
+							"type": "default"
+						},
+						{
+							"key": "pharmacy_wallet",
+							"value": "100000",
+							"type": "default"
+						},
+						{
+							"key": "no_facility",
+							"value": "5421335",
+							"type": "default"
+						},
+						{
+							"key": "pharmacy_owner",
+							"value": "Sara",
+							"type": "default"
+						},
+						{
+							"key": "line_phone",
+							"value": "011642145",
+							"type": "default"
+						},
+						{
+							"key": "no_image",
+							"value": "nsren_no_image.png",
+							"type": "default"
+						},
+						{
+							"key": "pharmacy_address",
+							"value": "near mole",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/pharmacy/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"pharmacy",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3BoYXJtYWN5L2xvZ2luIiwiaWF0IjoxNjg0MzQwNjg5LCJleHAiOjE2ODQzNDQyODksIm5iZiI6MTY4NDM0MDY4OSwianRpIjoiRnpUME1SZ3NwdndpWkFJViIsInN1YiI6IjEiLCJwcnYiOiI1MjJhMWE2NWUxMjY4ODNjNGFiMDUwNDRhMDQzNzU1ZTk4ZTI1NTVjIn0.oyLiZNUNMMoSmx3VcAXk_KpTJS3SF6epDOXIW7aneX8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "pharmacy_email",
+							"value": "basma@gmail.com",
+							"type": "default"
+						},
+						{
+							"key": "pharmacy_password",
+							"value": "123456",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/pharmacy/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"pharmacy",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Dashboard",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3BoYXJtYWN5L2xvZ2luIiwiaWF0IjoxNjg0MTQ1OTUzLCJleHAiOjE2ODQxNDk1NTMsIm5iZiI6MTY4NDE0NTk1MywianRpIjoiTEpXMzdBREhXN0Z0NW9XZCIsInN1YiI6IjIiLCJwcnYiOiI1MjJhMWE2NWUxMjY4ODNjNGFiMDUwNDRhMDQzNzU1ZTk4ZTI1NTVjIn0.3F46s6-Y694LLwjEUNz8qzpPpUTU1QzwIs5sYqEFdws",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/pharmacy/dashboard",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"pharmacy",
+						"dashboard"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3BoYXJtYWN5L2xvZ2luIiwiaWF0IjoxNjgzNjI4NDM0LCJleHAiOjE2ODM2MzIwMzQsIm5iZiI6MTY4MzYyODQzNCwianRpIjoiNGtDOERnUjR2TlM4eWtnQiIsInN1YiI6IjIiLCJwcnYiOiI1MjJhMWE2NWUxMjY4ODNjNGFiMDUwNDRhMDQzNzU1ZTk4ZTI1NTVjIn0.D_NCGGGDcRp3ZEkslEeHu_Vz_1JiKU8qYkZGmZ1cwn0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3BoYXJtYWN5L2xvZ2luIiwiaWF0IjoxNjgyNjg1ODk2LCJleHAiOjE2ODI2ODk0OTYsIm5iZiI6MTY4MjY4NTg5NiwianRpIjoiTVRDV2pvVkw4WWtvTUtEbSIsInN1YiI6IjMiLCJwcnYiOiI1MjJhMWE2NWUxMjY4ODNjNGFiMDUwNDRhMDQzNzU1ZTk4ZTI1NTVjIn0.lD516U-whvqUKqWj-bLxjT4eOT7Fue2RcVxzn9DFSqE",
+						"type": "default",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/pharmacy/dashboard/logout",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"pharmacy",
+						"dashboard",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit Profile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3BoYXJtYWN5L2xvZ2luIiwiaWF0IjoxNjgzNTYwNjYzLCJleHAiOjE2ODM1NjQyNjMsIm5iZiI6MTY4MzU2MDY2MywianRpIjoiZ0ZyTms0bXJEZEdkTmJseiIsInN1YiI6IjEiLCJwcnYiOiI1MjJhMWE2NWUxMjY4ODNjNGFiMDUwNDRhMDQzNzU1ZTk4ZTI1NTVjIn0.jQaedgYuD-GHMBNCL3ryx6K0Kgz9XXW_tBG55vSAM_4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "pharmacy_name",
+							"value": "Bara pharmacy edited",
+							"type": "default"
+						},
+						{
+							"key": "pharmacy_password",
+							"value": "123456789",
+							"type": "default"
+						},
+						{
+							"key": "pharmacy_phone",
+							"value": "01164544511",
+							"type": "default"
+						},
+						{
+							"key": "pharmacy_image",
+							"value": "1253123ghjhgh.png",
+							"type": "default"
+						},
+						{
+							"key": "pharmacy_owner",
+							"value": "Noman",
+							"type": "default"
+						},
+						{
+							"key": "pharmacy_old_password",
+							"value": "123456789",
+							"type": "default"
+						},
+						{
+							"key": "line_phone",
+							"value": "1231445",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/pharmacy/dashboard/edit_profile",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"pharmacy",
+						"dashboard",
+						"edit_profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Employee",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3BoYXJtYWN5L2xvZ2luIiwiaWF0IjoxNjkyMzc1MDMzLCJleHAiOjE2OTIzNzg2MzMsIm5iZiI6MTY5MjM3NTAzMywianRpIjoiOEppZ3dlQU1LNXl5bVFGSyIsInN1YiI6IjciLCJwcnYiOiI1MjJhMWE2NWUxMjY4ODNjNGFiMDUwNDRhMDQzNzU1ZTk4ZTI1NTVjIn0.udc1xKD6jceBBKAksiwoKNqbo3dm_xH_tQmkAMx-XHQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "employee_name",
+							"value": "Omar",
+							"type": "default"
+						},
+						{
+							"key": "employee_email",
+							"value": "omar@gmail.com",
+							"type": "default"
+						},
+						{
+							"key": "employee_password",
+							"value": "123456",
+							"type": "default"
+						},
+						{
+							"key": "employee_address",
+							"value": "Damascus",
+							"type": "default"
+						},
+						{
+							"key": "employee_phone",
+							"value": "0934547",
+							"type": "default"
+						},
+						{
+							"key": "salary",
+							"value": "150000",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/pharmacy/dashboard/add_employee",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"pharmacy",
+						"dashboard",
+						"add_employee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Employee",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3BoYXJtYWN5L2xvZ2luIiwiaWF0IjoxNjgzMjA4NTUzLCJleHAiOjE2ODMyMTIxNTMsIm5iZiI6MTY4MzIwODU1MywianRpIjoic0RwaWFkdGJjNXlxdlhUNiIsInN1YiI6IjE4IiwicHJ2IjoiNTIyYTFhNjVlMTI2ODgzYzRhYjA1MDQ0YTA0Mzc1NWU5OGUyNTU1YyJ9.DH3j2Dq6F27XKfYsMkh6WHm7Jn4MsM6p_MEPQstRUo4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "employee_name",
+							"value": "Ali Ahmad",
+							"type": "default"
+						},
+						{
+							"key": "employee_password",
+							"value": "111222333444555",
+							"type": "default"
+						},
+						{
+							"key": "employee_address",
+							"value": "Damascus",
+							"type": "default"
+						},
+						{
+							"key": "employee_phone",
+							"value": "0957421621",
+							"type": "default"
+						},
+						{
+							"key": "salary",
+							"value": "300000",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/pharmacy/dashboard/edit_employee/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"pharmacy",
+						"dashboard",
+						"edit_employee",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Employees",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3BoYXJtYWN5L2xvZ2luIiwiaWF0IjoxNjg0MTQ2MzMzLCJleHAiOjE2ODQxNDk5MzMsIm5iZiI6MTY4NDE0NjMzMywianRpIjoiVlJLbTRHdW9WUVJ6VVNWdCIsInN1YiI6IjEiLCJwcnYiOiI1MjJhMWE2NWUxMjY4ODNjNGFiMDUwNDRhMDQzNzU1ZTk4ZTI1NTVjIn0.056YmvHBA6q1Tnt56jdoSsJBj4UdMQu0a8R2tQZ38Jc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3BoYXJtYWN5L2xvZ2luIiwiaWF0IjoxNjgyNzQ3NTkwLCJleHAiOjE2ODI3NTExOTAsIm5iZiI6MTY4Mjc0NzU5MCwianRpIjoiUENFQmI3Umd3a01Dbk5adiIsInN1YiI6IjE4IiwicHJ2IjoiNTIyYTFhNjVlMTI2ODgzYzRhYjA1MDQ0YTA0Mzc1NWU5OGUyNTU1YyJ9.zKNg0h8dzy_rdB_CLUz3f_zVKQFkF1LIYKNpO03WhWE",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/pharmacy/dashboard/employee",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"pharmacy",
+						"dashboard",
+						"employee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove Employee",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3BoYXJtYWN5L2xvZ2luIiwiaWF0IjoxNjgzNzE0MDc5LCJleHAiOjE2ODM3MTc2NzksIm5iZiI6MTY4MzcxNDA3OSwianRpIjoiakhrWWtzZ0k2MVBtM0o4bCIsInN1YiI6IjEiLCJwcnYiOiI1MjJhMWE2NWUxMjY4ODNjNGFiMDUwNDRhMDQzNzU1ZTk4ZTI1NTVjIn0.E799-h7hRAEU-Us27jr-69Tm-BljMNAuW9vSIHPOQiw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "pharmacy_id",
+							"value": "18",
+							"type": "default"
+						},
+						{
+							"key": "employee_name",
+							"value": "Ali Ahmad",
+							"type": "default"
+						},
+						{
+							"key": "employee_email",
+							"value": "ali1999@gmail.com",
+							"type": "default"
+						},
+						{
+							"key": "employee_password",
+							"value": "111222333444555",
+							"type": "default"
+						},
+						{
+							"key": "employee_address",
+							"value": "Damascus",
+							"type": "default"
+						},
+						{
+							"key": "employee_phone",
+							"value": "0957421621",
+							"type": "default"
+						},
+						{
+							"key": "salary",
+							"value": "300000",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/pharmacy/dashboard/remove/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"pharmacy",
+						"dashboard",
+						"remove",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add  Detail",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3BoYXJtYWN5L2xvZ2luIiwiaWF0IjoxNjkyMzc2NDQ5LCJleHAiOjE2OTIzODAwNDksIm5iZiI6MTY5MjM3NjQ0OSwianRpIjoiVUZBYjF5UnBxd29KbVM2TCIsInN1YiI6IjciLCJwcnYiOiI1MjJhMWE2NWUxMjY4ODNjNGFiMDUwNDRhMDQzNzU1ZTk4ZTI1NTVjIn0.svWhxRjEK4V2_7w61lh-7j_Vr5ARIJPKadswuErfu8A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "day",
+							"value": "Wednesday",
+							"type": "default"
+						},
+						{
+							"key": "open",
+							"value": "1",
+							"type": "default"
+						},
+						{
+							"key": "close",
+							"value": "8",
+							"type": "default"
+						},
+						{
+							"key": "is_duty",
+							"value": "1",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/pharmacy/dashboard/details",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"pharmacy",
+						"dashboard",
+						"details"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Details",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3BoYXJtYWN5L2xvZ2luIiwiaWF0IjoxNjg0MTQ4MzEwLCJleHAiOjE2ODQxNTE5MTAsIm5iZiI6MTY4NDE0ODMxMCwianRpIjoiaHM1QVhYVkE3M0xIc01nTCIsInN1YiI6IjEiLCJwcnYiOiI1MjJhMWE2NWUxMjY4ODNjNGFiMDUwNDRhMDQzNzU1ZTk4ZTI1NTVjIn0.ommSZ5Ax3om_OnJ0Mp1zH5YhsWKtLgf9SPlLHYClZPc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/pharmacy/dashboard/get_details",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"pharmacy",
+						"dashboard",
+						"get_details"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit Detail",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3BoYXJtYWN5L2xvZ2luIiwiaWF0IjoxNjgzMjA4NTUzLCJleHAiOjE2ODMyMTIxNTMsIm5iZiI6MTY4MzIwODU1MywianRpIjoic0RwaWFkdGJjNXlxdlhUNiIsInN1YiI6IjE4IiwicHJ2IjoiNTIyYTFhNjVlMTI2ODgzYzRhYjA1MDQ0YTA0Mzc1NWU5OGUyNTU1YyJ9.DH3j2Dq6F27XKfYsMkh6WHm7Jn4MsM6p_MEPQstRUo4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "day",
+							"value": "Tuesday",
+							"type": "default"
+						},
+						{
+							"key": "open",
+							"value": "12",
+							"type": "default"
+						},
+						{
+							"key": "close",
+							"value": "18",
+							"type": "default"
+						},
+						{
+							"key": "is_duty",
+							"value": "0",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/pharmacy/dashboard/edit_details/3",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"pharmacy",
+						"dashboard",
+						"edit_details",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Requires",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3BoYXJtYWN5L2xvZ2luIiwiaWF0IjoxNjg0MzEyMjQ3LCJleHAiOjE2ODQzMTU4NDcsIm5iZiI6MTY4NDMxMjI0NywianRpIjoiYmlpeWx6Q2RmdXJ3clRYQiIsInN1YiI6IjEiLCJwcnYiOiI1MjJhMWE2NWUxMjY4ODNjNGFiMDUwNDRhMDQzNzU1ZTk4ZTI1NTVjIn0.7RiIrX5dtMm_McosfShNNBBb2BayLiXnhNwYORNJ4NY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/pharmacy/dashboard/get_requires/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"pharmacy",
+						"dashboard",
+						"get_requires",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Require Information",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3BoYXJtYWN5L2xvZ2luIiwiaWF0IjoxNjg0MTYzMTMxLCJleHAiOjE2ODQxNjY3MzEsIm5iZiI6MTY4NDE2MzEzMSwianRpIjoibkN0OXU2UzMweDNFOG1LVyIsInN1YiI6IjEiLCJwcnYiOiI1MjJhMWE2NWUxMjY4ODNjNGFiMDUwNDRhMDQzNzU1ZTk4ZTI1NTVjIn0.h3YUokTLXJ6t0BqwxB_l-QkhIaEiIDkjU1SZojkOycw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/pharmacy/dashboard/get_requires/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"pharmacy",
+						"dashboard",
+						"get_requires",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Employee By Name",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3BoYXJtYWN5L2xvZ2luIiwiaWF0IjoxNjg0MjMxNjEzLCJleHAiOjE2ODQyMzUyMTMsIm5iZiI6MTY4NDIzMTYxMywianRpIjoiM2JpcEs5aGhpQmxGVVNkViIsInN1YiI6IjEiLCJwcnYiOiI1MjJhMWE2NWUxMjY4ODNjNGFiMDUwNDRhMDQzNzU1ZTk4ZTI1NTVjIn0.3_C6kjwj5x8ewN9_31KjG_T7KmGVTTmS4zKiUhT32pM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/pharmacy/dashboard/search_employee?employee_name=jm",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"pharmacy",
+						"dashboard",
+						"search_employee"
+					],
+					"query": [
+						{
+							"key": "employee_name",
+							"value": "jm"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Employee Information",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3BoYXJtYWN5L2xvZ2luIiwiaWF0IjoxNjg0MTY3MDA2LCJleHAiOjE2ODQxNzA2MDYsIm5iZiI6MTY4NDE2NzAwNiwianRpIjoiWWhiTEZHdFZqSDU4WWg3ayIsInN1YiI6IjEiLCJwcnYiOiI1MjJhMWE2NWUxMjY4ODNjNGFiMDUwNDRhMDQzNzU1ZTk4ZTI1NTVjIn0.OSUPYlQOUZ_X5fAQ_MO1RQa2g-cbSYSKtrrFBb-yQTw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/pharmacy/dashboard/employee/5",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"pharmacy",
+						"dashboard",
+						"employee",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Stock",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3BoYXJtYWN5L2xvZ2luIiwiaWF0IjoxNjkyMzc2Njc3LCJleHAiOjE2OTIzODAyNzcsIm5iZiI6MTY5MjM3NjY3NywianRpIjoiR2V0bG9iQVgyYUJhSERIUCIsInN1YiI6IjUiLCJwcnYiOiI1MjJhMWE2NWUxMjY4ODNjNGFiMDUwNDRhMDQzNzU1ZTk4ZTI1NTVjIn0._cDi5BeHlaaDpba39yk4g9_j5eBqlbHyw2mb_OMqQsE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "location_id",
+							"value": "2",
+							"type": "default"
+						},
+						{
+							"key": "stock_name",
+							"value": "stock140",
+							"type": "default"
+						},
+						{
+							"key": "space",
+							"value": "200 m2",
+							"type": "default"
+						},
+						{
+							"key": "temp",
+							"value": "24 c",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/pharmacy/dashboard/create_stock",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"pharmacy",
+						"dashboard",
+						"create_stock"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Stock Item",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3BoYXJtYWN5L2xvZ2luIiwiaWF0IjoxNjkyMzc2OTU2LCJleHAiOjE2OTIzODA1NTYsIm5iZiI6MTY5MjM3Njk1NiwianRpIjoiSjFuc3AybjZmR2laZ1BncyIsInN1YiI6IjciLCJwcnYiOiI1MjJhMWE2NWUxMjY4ODNjNGFiMDUwNDRhMDQzNzU1ZTk4ZTI1NTVjIn0.Lcq_n1kJUkNyWTSsR_s56J4DlYbxyyg-8MRq_oCYkfU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "content_id",
+							"value": "9",
+							"type": "default"
+						},
+						{
+							"key": "quantity",
+							"value": "10",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/pharmacy/dashboard/add_stock_item/4",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"pharmacy",
+						"dashboard",
+						"add_stock_item",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Return Stock Item",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3BoYXJtYWN5L2xvZ2luIiwiaWF0IjoxNjg0MDYwMzc5LCJleHAiOjE2ODQwNjM5NzksIm5iZiI6MTY4NDA2MDM3OSwianRpIjoiQjVnaVNLVWpIU094dnpSYiIsInN1YiI6IjEiLCJwcnYiOiI1MjJhMWE2NWUxMjY4ODNjNGFiMDUwNDRhMDQzNzU1ZTk4ZTI1NTVjIn0.fwng5QUYq9UlnNL5ifpaK_M6jFAPq_MlW-1mzSXvx1Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "content_id",
+							"value": "2",
+							"type": "default"
+						},
+						{
+							"key": "quantity",
+							"value": "50",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/pharmacy/dashboard/return_stock_item/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"pharmacy",
+						"dashboard",
+						"return_stock_item",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Stocks",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3BoYXJtYWN5L2xvZ2luIiwiaWF0IjoxNjg0MjMxNjEzLCJleHAiOjE2ODQyMzUyMTMsIm5iZiI6MTY4NDIzMTYxMywianRpIjoiM2JpcEs5aGhpQmxGVVNkViIsInN1YiI6IjEiLCJwcnYiOiI1MjJhMWE2NWUxMjY4ODNjNGFiMDUwNDRhMDQzNzU1ZTk4ZTI1NTVjIn0.3_C6kjwj5x8ewN9_31KjG_T7KmGVTTmS4zKiUhT32pM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/pharmacy/dashboard/get_stocks",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"pharmacy",
+						"dashboard",
+						"get_stocks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove Socket",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3BoYXJtYWN5L2xvZ2luIiwiaWF0IjoxNjg0MjQzNTY3LCJleHAiOjE2ODQyNDcxNjcsIm5iZiI6MTY4NDI0MzU2NywianRpIjoicXg3eWtPcDV6SmUyV083SiIsInN1YiI6IjEiLCJwcnYiOiI1MjJhMWE2NWUxMjY4ODNjNGFiMDUwNDRhMDQzNzU1ZTk4ZTI1NTVjIn0.6uNr4f1hbJ7R6pRY9aebNHxqXcm741F4bj4YH1Vcu7s",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/pharmacy/dashboard/remove_stock/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"pharmacy",
+						"dashboard",
+						"remove_stock",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Content",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3BoYXJtYWN5L2xvZ2luIiwiaWF0IjoxNjkyMzc1NDUwLCJleHAiOjE2OTIzNzkwNTAsIm5iZiI6MTY5MjM3NTQ1MCwianRpIjoiUElxMUdJcHB6RXhVcVpzMSIsInN1YiI6IjUiLCJwcnYiOiI1MjJhMWE2NWUxMjY4ODNjNGFiMDUwNDRhMDQzNzU1ZTk4ZTI1NTVjIn0.IlCqmnOB82cQLOAPPbRxavuavTOkH7rE6kBvewAtb8w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "material_id",
+							"value": "6",
+							"type": "default"
+						},
+						{
+							"key": "batch_id",
+							"value": "6",
+							"type": "default"
+						},
+						{
+							"key": "quantity",
+							"value": "30",
+							"type": "default"
+						},
+						{
+							"key": "min",
+							"value": "4",
+							"type": "default"
+						},
+						{
+							"key": "max",
+							"value": "20",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/pharmacy/dashboard/add_content",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"pharmacy",
+						"dashboard",
+						"add_content"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pharmacy Edit Content",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3BoYXJtYWN5L2xvZ2luIiwiaWF0IjoxNjg0MDgxODEyLCJleHAiOjE2ODQwODU0MTIsIm5iZiI6MTY4NDA4MTgxMiwianRpIjoiRHU5WnFycFo5Q1Z6M2dBNyIsInN1YiI6IjEiLCJwcnYiOiI1MjJhMWE2NWUxMjY4ODNjNGFiMDUwNDRhMDQzNzU1ZTk4ZTI1NTVjIn0.R-wl3zSGH2V5z4zUcqv7Zv4tDpiiyVbw4ne82P0TVUQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "material_id",
+							"value": "9",
+							"type": "default",
+							"disabled": true
+						},
+						{
+							"key": "batch_id",
+							"value": "4",
+							"type": "default",
+							"disabled": true
+						},
+						{
+							"key": "quantity",
+							"value": "7",
+							"type": "default",
+							"disabled": true
+						},
+						{
+							"key": "min",
+							"value": "6",
+							"type": "default"
+						},
+						{
+							"key": "max",
+							"value": "15",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/pharmacy/dashboard/edit_content/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"pharmacy",
+						"dashboard",
+						"edit_content",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pharmacy Get Minimum Content",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3BoYXJtYWN5L2xvZ2luIiwiaWF0IjoxNjg0MzEwOTkyLCJleHAiOjE2ODQzMTQ1OTIsIm5iZiI6MTY4NDMxMDk5MiwianRpIjoiYUFzbjZHM1FxbU1TWWN1ViIsInN1YiI6IjEiLCJwcnYiOiI1MjJhMWE2NWUxMjY4ODNjNGFiMDUwNDRhMDQzNzU1ZTk4ZTI1NTVjIn0.US4wDKhuyesYEQSRX9um5CUDWVFAhAjH65fu6cYhr0c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/pharmacy/dashboard/minimum_notification",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"pharmacy",
+						"dashboard",
+						"minimum_notification"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pharmacy Get Maximum Content",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3BoYXJtYWN5L2xvZ2luIiwiaWF0IjoxNjgzMjk2MjU2LCJleHAiOjE2ODMyOTk4NTYsIm5iZiI6MTY4MzI5NjI1NiwianRpIjoiZXZpN01VVVdmaE9UM0g0NyIsInN1YiI6IjE4IiwicHJ2IjoiNTIyYTFhNjVlMTI2ODgzYzRhYjA1MDQ0YTA0Mzc1NWU5OGUyNTU1YyJ9.kzRA6ZkyeauXB_54zVsWAA87cqg6KeTOBiAN4w-t3KY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/pharmacy/dashboard/maximum_notification",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"pharmacy",
+						"dashboard",
+						"maximum_notification"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Detail",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3BoYXJtYWN5L2xvZ2luIiwiaWF0IjoxNjgzMjEzNTcyLCJleHAiOjE2ODMyMTcxNzIsIm5iZiI6MTY4MzIxMzU3MiwianRpIjoiYWNxVDRiZTJ4bWFiU1hyaiIsInN1YiI6IjE4IiwicHJ2IjoiNTIyYTFhNjVlMTI2ODgzYzRhYjA1MDQ0YTA0Mzc1NWU5OGUyNTU1YyJ9.IR8s_NhS593u0frwPa79xP--BOL77Qh7hGzjvVsuONA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/pharmacy/dashboard/remove_details/6",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"pharmacy",
+						"dashboard",
+						"remove_details",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reject Require",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3BoYXJtYWN5L2xvZ2luIiwiaWF0IjoxNjg0MzEyMjQ3LCJleHAiOjE2ODQzMTU4NDcsIm5iZiI6MTY4NDMxMjI0NywianRpIjoiYmlpeWx6Q2RmdXJ3clRYQiIsInN1YiI6IjEiLCJwcnYiOiI1MjJhMWE2NWUxMjY4ODNjNGFiMDUwNDRhMDQzNzU1ZTk4ZTI1NTVjIn0.7RiIrX5dtMm_McosfShNNBBb2BayLiXnhNwYORNJ4NY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/pharmacy/dashboard/reject_require/4",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"pharmacy",
+						"dashboard",
+						"reject_require",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Accept Require",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3BoYXJtYWN5L2xvZ2luIiwiaWF0IjoxNjg0MzEyMjQ3LCJleHAiOjE2ODQzMTU4NDcsIm5iZiI6MTY4NDMxMjI0NywianRpIjoiYmlpeWx6Q2RmdXJ3clRYQiIsInN1YiI6IjEiLCJwcnYiOiI1MjJhMWE2NWUxMjY4ODNjNGFiMDUwNDRhMDQzNzU1ZTk4ZTI1NTVjIn0.7RiIrX5dtMm_McosfShNNBBb2BayLiXnhNwYORNJ4NY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/pharmacy/dashboard/accept_require/4",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"pharmacy",
+						"dashboard",
+						"accept_require",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Order",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3BoYXJtYWN5L2xvZ2luIiwiaWF0IjoxNjkyMzc3NzAyLCJleHAiOjE2OTIzODEzMDIsIm5iZiI6MTY5MjM3NzcwMiwianRpIjoiUjV3R244UUxjM2twcVkxbyIsInN1YiI6IjUiLCJwcnYiOiI1MjJhMWE2NWUxMjY4ODNjNGFiMDUwNDRhMDQzNzU1ZTk4ZTI1NTVjIn0.2JjC6JWUDX8PgGX0_1AcDc_vYsSN6xwStFr0sifgPCE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "company_id",
+							"value": "2",
+							"type": "default"
+						},
+						{
+							"key": "order_number",
+							"value": "1500",
+							"type": "default"
+						},
+						{
+							"key": "order_description",
+							"value": "this order to Tameco Company",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/pharmacy/dashboard/create_order",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"pharmacy",
+						"dashboard",
+						"create_order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Send Order",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3BoYXJtYWN5L2xvZ2luIiwiaWF0IjoxNjg0MzE2MTYwLCJleHAiOjE2ODQzMTk3NjAsIm5iZiI6MTY4NDMxNjE2MCwianRpIjoiWEJmdzlRc3N2MlZubHhjOCIsInN1YiI6IjEiLCJwcnYiOiI1MjJhMWE2NWUxMjY4ODNjNGFiMDUwNDRhMDQzNzU1ZTk4ZTI1NTVjIn0.1Mk-ByP_s1E_G9MLlPmVaZG1AyFNTTAmjg_Ib1FkjbM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/pharmacy/dashboard/send_order/3",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"pharmacy",
+						"dashboard",
+						"send_order",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pharmacy Get Orders",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3BoYXJtYWN5L2xvZ2luIiwiaWF0IjoxNjg0MzE5NzYxLCJleHAiOjE2ODQzMjMzNjEsIm5iZiI6MTY4NDMxOTc2MSwianRpIjoidGk5MWdXVTZKMm95MDd5WiIsInN1YiI6IjEiLCJwcnYiOiI1MjJhMWE2NWUxMjY4ODNjNGFiMDUwNDRhMDQzNzU1ZTk4ZTI1NTVjIn0.zJd0FHxwaM0d8fhVOoXrPL2aPt_GRz_iUpAVQxLYXDE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/pharmacy/dashboard/get_order/3/3",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"pharmacy",
+						"dashboard",
+						"get_order",
+						"3",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Give Employee Salary",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3BoYXJtYWN5L2xvZ2luIiwiaWF0IjoxNjgzMjEzNTcyLCJleHAiOjE2ODMyMTcxNzIsIm5iZiI6MTY4MzIxMzU3MiwianRpIjoiYWNxVDRiZTJ4bWFiU1hyaiIsInN1YiI6IjE4IiwicHJ2IjoiNTIyYTFhNjVlMTI2ODgzYzRhYjA1MDQ0YTA0Mzc1NWU5OGUyNTU1YyJ9.IR8s_NhS593u0frwPa79xP--BOL77Qh7hGzjvVsuONA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/pharmacy/dashboard/give_salary/9",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"pharmacy",
+						"dashboard",
+						"give_salary",
+						"9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Check Orders",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/pharmacy/dashboard/check_orders",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"pharmacy",
+						"dashboard",
+						"check_orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Waste Batchs",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3BoYXJtYWN5L2xvZ2luIiwiaWF0IjoxNjkyMzkxNTczLCJleHAiOjE2OTIzOTUxNzMsIm5iZiI6MTY5MjM5MTU3MywianRpIjoiM2xLR1ptaE8ydW1SU003cCIsInN1YiI6IjciLCJwcnYiOiI1MjJhMWE2NWUxMjY4ODNjNGFiMDUwNDRhMDQzNzU1ZTk4ZTI1NTVjIn0.DvDvhptmVaUJjyNR9Fs4AHMDAHvA8oCJDjjfIeEDwc0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/pharmacy/dashboard/get_waste_batchs",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"pharmacy",
+						"dashboard",
+						"get_waste_batchs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Waste",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3BoYXJtYWN5L2xvZ2luIiwiaWF0IjoxNjkyMzc5MDIyLCJleHAiOjE2OTIzODI2MjIsIm5iZiI6MTY5MjM3OTAyMiwianRpIjoiRkducVlqem1vc2VzcG9VSyIsInN1YiI6IjUiLCJwcnYiOiI1MjJhMWE2NWUxMjY4ODNjNGFiMDUwNDRhMDQzNzU1ZTk4ZTI1NTVjIn0.q_Dd7_kxOnASdst7QlWJa63vwYPpTJQNN6CJsi2R0jc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "w_descriptions",
+							"value": "no description",
+							"type": "default"
+						},
+						{
+							"key": "wastes_number",
+							"value": "1200",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/pharmacy/dashboard/create_waste",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"pharmacy",
+						"dashboard",
+						"create_waste"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Waste Item",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3BoYXJtYWN5L2xvZ2luIiwiaWF0IjoxNjkyMzc5MDIyLCJleHAiOjE2OTIzODI2MjIsIm5iZiI6MTY5MjM3OTAyMiwianRpIjoiRkducVlqem1vc2VzcG9VSyIsInN1YiI6IjUiLCJwcnYiOiI1MjJhMWE2NWUxMjY4ODNjNGFiMDUwNDRhMDQzNzU1ZTk4ZTI1NTVjIn0.q_Dd7_kxOnASdst7QlWJa63vwYPpTJQNN6CJsi2R0jc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "content_id",
+							"value": "11",
+							"type": "default"
+						},
+						{
+							"key": "quantity",
+							"value": "2",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/pharmacy/dashboard/add_waste_item/3",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"pharmacy",
+						"dashboard",
+						"add_waste_item",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Waste Bills",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3BoYXJtYWN5L2xvZ2luIiwiaWF0IjoxNjg0MzU1OTY0LCJleHAiOjE2ODQzNTk1NjQsIm5iZiI6MTY4NDM1NTk2NCwianRpIjoiNXVuQWJGcmtHZDNaZkJkYSIsInN1YiI6IjEiLCJwcnYiOiI1MjJhMWE2NWUxMjY4ODNjNGFiMDUwNDRhMDQzNzU1ZTk4ZTI1NTVjIn0.Hmm11q0nBeZAnY0pghWLaBmyz4YucwIXHm1nJfq_4cQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/pharmacy/dashboard/get_wastes/1/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"pharmacy",
+						"dashboard",
+						"get_wastes",
+						"1",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Item To Order",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3BoYXJtYWN5L2xvZ2luIiwiaWF0IjoxNjkyMzc3NzAyLCJleHAiOjE2OTIzODEzMDIsIm5iZiI6MTY5MjM3NzcwMiwianRpIjoiUjV3R244UUxjM2twcVkxbyIsInN1YiI6IjUiLCJwcnYiOiI1MjJhMWE2NWUxMjY4ODNjNGFiMDUwNDRhMDQzNzU1ZTk4ZTI1NTVjIn0.2JjC6JWUDX8PgGX0_1AcDc_vYsSN6xwStFr0sifgPCE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "material_id",
+							"value": "4",
+							"type": "default"
+						},
+						{
+							"key": "quantity",
+							"value": "30",
+							"type": "default"
+						},
+						{
+							"key": "batch_id",
+							"value": "4",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/pharmacy/dashboard/add_order_item/6",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"pharmacy",
+						"dashboard",
+						"add_order_item",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Rates",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/pharmacy/dashboard/get_rates",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"pharmacy",
+						"dashboard",
+						"get_rates"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Favorite Materials",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/pharmacy/dashboard/get_favorite",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"pharmacy",
+						"dashboard",
+						"get_favorite"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Remove Favorite Material",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/pharmacy/dashboard/add_remove_favorite/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"pharmacy",
+						"dashboard",
+						"add_remove_favorite",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pharmacy Add Bill Item",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3BoYXJtYWN5L2xvZ2luIiwiaWF0IjoxNjkyMzc4MTM4LCJleHAiOjE2OTIzODE3MzgsIm5iZiI6MTY5MjM3ODEzOCwianRpIjoieEk3bmUyQ24zdlZ5bDdhbSIsInN1YiI6IjciLCJwcnYiOiI1MjJhMWE2NWUxMjY4ODNjNGFiMDUwNDRhMDQzNzU1ZTk4ZTI1NTVjIn0.TGIc--0khg6h_X-hiliyo2cz2NcnalCL4iqYdqLeYDI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "content_id",
+							"value": "8",
+							"type": "default"
+						},
+						{
+							"key": "quantity",
+							"value": "3",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/pharmacy/dashboard/add_bill_item/9",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"pharmacy",
+						"dashboard",
+						"add_bill_item",
+						"9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pharmacy Return Bill",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3BoYXJtYWN5L2xvZ2luIiwiaWF0IjoxNjgzMzc0MDQ4LCJleHAiOjE2ODMzNzc2NDgsIm5iZiI6MTY4MzM3NDA0OCwianRpIjoiM0V1dW96UzVreTZYR0s5SiIsInN1YiI6IjE4IiwicHJ2IjoiNTIyYTFhNjVlMTI2ODgzYzRhYjA1MDQ0YTA0Mzc1NWU5OGUyNTU1YyJ9.PPmuH8PDVRbQdfmm5MP60_2CvDueqtMwMEWNdqR3ljY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/pharmacy/dashboard/return_bill/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"pharmacy",
+						"dashboard",
+						"return_bill",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pharmacy Create Bill",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3BoYXJtYWN5L2xvZ2luIiwiaWF0IjoxNjkyMzg2MDIxLCJleHAiOjE2OTIzODk2MjEsIm5iZiI6MTY5MjM4NjAyMSwianRpIjoiZ1J5akJwZUFnRFNyNUhldSIsInN1YiI6IjciLCJwcnYiOiI1MjJhMWE2NWUxMjY4ODNjNGFiMDUwNDRhMDQzNzU1ZTk4ZTI1NTVjIn0.rkfVyrzrx9vQrtkysvO3Wbq8n8ssaqVg0KaEv94OUK4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "client_id",
+							"value": "",
+							"type": "default",
+							"disabled": true
+						},
+						{
+							"key": "bill_number",
+							"value": "D_23",
+							"type": "default"
+						},
+						{
+							"key": "is_delivery",
+							"value": "0",
+							"type": "default"
+						},
+						{
+							"key": "delivery_cost",
+							"value": "0",
+							"type": "default"
+						},
+						{
+							"key": "is_return",
+							"value": "0",
+							"type": "default"
+						},
+						{
+							"key": "client_name",
+							"value": "ahmad",
+							"type": "default"
+						},
+						{
+							"key": "cdelivery_id",
+							"value": "",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/pharmacy/dashboard/create_bill",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"pharmacy",
+						"dashboard",
+						"create_bill"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pharmacy Get Bills",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3BoYXJtYWN5L2xvZ2luIiwiaWF0IjoxNjg0MzM3MjY3LCJleHAiOjE2ODQzNDA4NjcsIm5iZiI6MTY4NDMzNzI2NywianRpIjoiOFkzVVhHbUxqaVUySHNyTyIsInN1YiI6IjEiLCJwcnYiOiI1MjJhMWE2NWUxMjY4ODNjNGFiMDUwNDRhMDQzNzU1ZTk4ZTI1NTVjIn0.Et1jkDAezMICr_g08yEsGShgB6_RJgcN-XLCAMXnaFE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/pharmacy/dashboard/get_bills/1/2/3",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"pharmacy",
+						"dashboard",
+						"get_bills",
+						"1",
+						"2",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pharmacy Get All Pharmacy Materials",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3BoYXJtYWN5L2xvZ2luIiwiaWF0IjoxNjkyMzkxNTczLCJleHAiOjE2OTIzOTUxNzMsIm5iZiI6MTY5MjM5MTU3MywianRpIjoiM2xLR1ptaE8ydW1SU003cCIsInN1YiI6IjciLCJwcnYiOiI1MjJhMWE2NWUxMjY4ODNjNGFiMDUwNDRhMDQzNzU1ZTk4ZTI1NTVjIn0.DvDvhptmVaUJjyNR9Fs4AHMDAHvA8oCJDjjfIeEDwc0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/pharmacy/dashboard/get_all_pharmacy_materials",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"pharmacy",
+						"dashboard",
+						"get_all_pharmacy_materials"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pharmacy Get Minimums",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3BoYXJtYWN5L2xvZ2luIiwiaWF0IjoxNjkyMzQ3NTU0LCJleHAiOjE2OTIzNTExNTQsIm5iZiI6MTY5MjM0NzU1NCwianRpIjoidG55Qk5ENXVLZGNVSEJ4SSIsInN1YiI6IjEiLCJwcnYiOiI1MjJhMWE2NWUxMjY4ODNjNGFiMDUwNDRhMDQzNzU1ZTk4ZTI1NTVjIn0.9T86YMRkCkxrsDIyvq0KtzqHzzo0FzCBj_tOFspw-_I",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/pharmacy/dashboard/get_minimum",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"pharmacy",
+						"dashboard",
+						"get_minimum"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pharmacy Get Maximums",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3BoYXJtYWN5L2xvZ2luIiwiaWF0IjoxNjkyMzQ3NTU0LCJleHAiOjE2OTIzNTExNTQsIm5iZiI6MTY5MjM0NzU1NCwianRpIjoidG55Qk5ENXVLZGNVSEJ4SSIsInN1YiI6IjEiLCJwcnYiOiI1MjJhMWE2NWUxMjY4ODNjNGFiMDUwNDRhMDQzNzU1ZTk4ZTI1NTVjIn0.9T86YMRkCkxrsDIyvq0KtzqHzzo0FzCBj_tOFspw-_I",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/pharmacy/dashboard/get_maximum",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"pharmacy",
+						"dashboard",
+						"get_maximum"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Delivery Copmpanies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/gets/get_delivery_companies/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"gets",
+						"get_delivery_companies",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pharmacy Create Report",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3BoYXJtYWN5L2xvZ2luIiwiaWF0IjoxNjg1MzM2NjMzLCJleHAiOjE2ODUzNDAyMzMsIm5iZiI6MTY4NTMzNjYzMywianRpIjoiMjl3WVFnaGV5TGdhaG1tbiIsInN1YiI6IjEiLCJwcnYiOiI1MjJhMWE2NWUxMjY4ODNjNGFiMDUwNDRhMDQzNzU1ZTk4ZTI1NTVjIn0.7zCIB_2gS9-PCuKyH77qf2DiFwYjCsBpHpkP8xEwP4Y",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "from",
+							"value": "2023-05-17",
+							"type": "default"
+						},
+						{
+							"key": "to",
+							"value": "2023-05-22",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/pharmacy/dashboard/make_report/5",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"pharmacy",
+						"dashboard",
+						"make_report",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Favorite",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3BoYXJtYWN5L2xvZ2luIiwiaWF0IjoxNjkyMjg0OTYwLCJleHAiOjE2OTIyODg1NjAsIm5iZiI6MTY5MjI4NDk2MCwianRpIjoibks2VzV6V25VdU92T0FBbyIsInN1YiI6IjEiLCJwcnYiOiI1MjJhMWE2NWUxMjY4ODNjNGFiMDUwNDRhMDQzNzU1ZTk4ZTI1NTVjIn0.7MPwun4ssW5pps8qMFo8qB3RCzTu1cWmvh0UUvu1fq0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "material_id",
+							"value": "1",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/pharmacy/dashboard/delete_favorite/4",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"pharmacy",
+						"dashboard",
+						"delete_favorite",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pharmacy Remove Favorite",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3BoYXJtYWN5L2xvZ2luIiwiaWF0IjoxNjkyMzQ1OTE3LCJleHAiOjE2OTIzNDk1MTcsIm5iZiI6MTY5MjM0NTkxNywianRpIjoiVWtwZ0k2d2NDTWxtbnVZNiIsInN1YiI6IjEiLCJwcnYiOiI1MjJhMWE2NWUxMjY4ODNjNGFiMDUwNDRhMDQzNzU1ZTk4ZTI1NTVjIn0.HITkuSddVPaEbJ-S4e8gxeypQkXDuvB_xLBuX4TbeOE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/pharmacy/dashboard/delete_favorite/3",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"pharmacy",
+						"dashboard",
+						"delete_favorite",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pharmacy Add Favorite",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3BoYXJtYWN5L2xvZ2luIiwiaWF0IjoxNjkyMzgxNjI4LCJleHAiOjE2OTIzODUyMjgsIm5iZiI6MTY5MjM4MTYyOCwianRpIjoiaHQ5SndXaVFvdmJzaEtsVSIsInN1YiI6IjciLCJwcnYiOiI1MjJhMWE2NWUxMjY4ODNjNGFiMDUwNDRhMDQzNzU1ZTk4ZTI1NTVjIn0.-l9XfanlqgzX4iQE5B5K-NqE_BiDu5JvG3arMpRCWJ8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "material_id",
+							"value": "6"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/pharmacy/dashboard/add_favorite",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"pharmacy",
+						"dashboard",
+						"add_favorite"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pharmacy Get Content Detail",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3BoYXJtYWN5L2xvZ2luIiwiaWF0IjoxNjkyMzQ1OTE3LCJleHAiOjE2OTIzNDk1MTcsIm5iZiI6MTY5MjM0NTkxNywianRpIjoiVWtwZ0k2d2NDTWxtbnVZNiIsInN1YiI6IjEiLCJwcnYiOiI1MjJhMWE2NWUxMjY4ODNjNGFiMDUwNDRhMDQzNzU1ZTk4ZTI1NTVjIn0.HITkuSddVPaEbJ-S4e8gxeypQkXDuvB_xLBuX4TbeOE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "material_id",
+							"value": "1"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/pharmacy/dashboard/add_favorite",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"pharmacy",
+						"dashboard",
+						"add_favorite"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

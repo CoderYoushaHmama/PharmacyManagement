@@ -1,0 +1,478 @@
+{
+	"info": {
+		"_postman_id": "563e8b87-e110-4207-98f9-06ed79b3dcba",
+		"name": "Final Employee",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "employee_email",
+							"value": "ahmad@gmail.com",
+							"type": "default"
+						},
+						{
+							"key": "employee_password",
+							"value": "123456",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/employee/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"employee",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2VtcGxveWVlL2xvZ2luIiwiaWF0IjoxNjg0MzExNDc4LCJleHAiOjE2ODQzMTUwNzgsIm5iZiI6MTY4NDMxMTQ3OCwianRpIjoiYmltRjRzMjNWOHFKa011UiIsInN1YiI6IjUiLCJwcnYiOiIzMjk2M2E2MDZjMmYxNzFmMWMxNDMzMWU3Njk3NjZjZDU5MTJlZDE1In0.ykFXj41B8MvnHARdylXXhTguutE12lVMTpGid-OdQv0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2VtcGxveWVlL2xvZ2luIiwiaWF0IjoxNjgyNjkwMDY2LCJleHAiOjE2ODI2OTM2NjYsIm5iZiI6MTY4MjY5MDA2NiwianRpIjoiSkpjTkd1ZmdqR1czdlFTNiIsInN1YiI6IjIiLCJwcnYiOiIzMjk2M2E2MDZjMmYxNzFmMWMxNDMzMWU3Njk3NjZjZDU5MTJlZDE1In0.mt4Rx83jymsk-cxz10PJP48sG_fgJtN6YFPFJ4jy_44",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/employee/dashboard/logout",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"employee",
+						"dashboard",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Dashboard",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2VtcGxveWVlL2xvZ2luIiwiaWF0IjoxNjg0MzExNTY2LCJleHAiOjE2ODQzMTUxNjYsIm5iZiI6MTY4NDMxMTU2NiwianRpIjoiV2dTcVlrMEJTNzVMaG9FciIsInN1YiI6IjUiLCJwcnYiOiIzMjk2M2E2MDZjMmYxNzFmMWMxNDMzMWU3Njk3NjZjZDU5MTJlZDE1In0.ATXoZ4nTHSDbrQSD6yEHG1hskORFo-kEXJjLbltcaSs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2VtcGxveWVlL2xvZ2luIiwiaWF0IjoxNjgyNjkxMzA1LCJleHAiOjE2ODI2OTQ5MDUsIm5iZiI6MTY4MjY5MTMwNSwianRpIjoic0N4bXdtYjdxV2tpUFFJMyIsInN1YiI6IjIiLCJwcnYiOiIzMjk2M2E2MDZjMmYxNzFmMWMxNDMzMWU3Njk3NjZjZDU5MTJlZDE1In0.y28s-BmAwp24j04oWNS1F1xG0nSrkVcImV_vR6QpRS0",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/employee/dashboard",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"employee",
+						"dashboard"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Require",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2VtcGxveWVlL2xvZ2luIiwiaWF0IjoxNjkyMzc4NjUwLCJleHAiOjE2OTIzODIyNTAsIm5iZiI6MTY5MjM3ODY1MCwianRpIjoiNUc1RklxQ2h3cWdlalNYRSIsInN1YiI6IjMiLCJwcnYiOiIzMjk2M2E2MDZjMmYxNzFmMWMxNDMzMWU3Njk3NjZjZDU5MTJlZDE1In0.8UU48Cqa741gtpzlsVpF1cYHc02_uANQJ5a1lEbQZGA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "material_id",
+							"value": "4",
+							"type": "default"
+						},
+						{
+							"key": "quantity",
+							"value": "22",
+							"type": "default"
+						},
+						{
+							"key": "description",
+							"value": "this medicine liked from more people",
+							"type": "default"
+						},
+						{
+							"key": "require_number",
+							"value": "1230",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/employee/dashboard/add_require",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"employee",
+						"dashboard",
+						"add_require"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Requires",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2VtcGxveWVlL2xvZ2luIiwiaWF0IjoxNjg0MDYzNjI3LCJleHAiOjE2ODQwNjcyMjcsIm5iZiI6MTY4NDA2MzYyNywianRpIjoiVEhHTlJHZzhCM25kRnRoUCIsInN1YiI6IjIiLCJwcnYiOiIzMjk2M2E2MDZjMmYxNzFmMWMxNDMzMWU3Njk3NjZjZDU5MTJlZDE1In0.gFBXK5vWzOfMW1rZbquoVYpFn5efae_2F8EGsQizbbE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/employee/dashboard/get_require",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"employee",
+						"dashboard",
+						"get_require"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Waste Batchs",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3BoYXJtYWN5L2xvZ2luIiwiaWF0IjoxNjkyMzkxNTczLCJleHAiOjE2OTIzOTUxNzMsIm5iZiI6MTY5MjM5MTU3MywianRpIjoiM2xLR1ptaE8ydW1SU003cCIsInN1YiI6IjciLCJwcnYiOiI1MjJhMWE2NWUxMjY4ODNjNGFiMDUwNDRhMDQzNzU1ZTk4ZTI1NTVjIn0.DvDvhptmVaUJjyNR9Fs4AHMDAHvA8oCJDjjfIeEDwc0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/pharmacy/dashboard/add_waste_item/3",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"pharmacy",
+						"dashboard",
+						"add_waste_item",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Employee Create Bill",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2VtcGxveWVlL2xvZ2luIiwiaWF0IjoxNjgzMzUyNDU5LCJleHAiOjE2ODMzNTYwNTksIm5iZiI6MTY4MzM1MjQ1OSwianRpIjoiNEhZM0R3QkYzNGdjOTB6biIsInN1YiI6IjkiLCJwcnYiOiIzMjk2M2E2MDZjMmYxNzFmMWMxNDMzMWU3Njk3NjZjZDU5MTJlZDE1In0.TMCt6flxkpq1fUOIbv_PO-BZ3Pavqj5bHXaaeWxQmao",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "client_id",
+							"value": "1",
+							"type": "default"
+						},
+						{
+							"key": "bill_number",
+							"value": "E_12",
+							"type": "default"
+						},
+						{
+							"key": "is_delivery",
+							"value": "0",
+							"type": "default"
+						},
+						{
+							"key": "delivery_cost",
+							"value": "100",
+							"type": "default"
+						},
+						{
+							"key": "is_return",
+							"value": "0",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/employee/dashboard/create_bill",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"employee",
+						"dashboard",
+						"create_bill"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Employee Add Bill Item",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2VtcGxveWVlL2xvZ2luIiwiaWF0IjoxNjgzMzY0NjY5LCJleHAiOjE2ODMzNjgyNjksIm5iZiI6MTY4MzM2NDY2OSwianRpIjoiS0NVUVZoQjVZMHBUMlpKVSIsInN1YiI6IjkiLCJwcnYiOiIzMjk2M2E2MDZjMmYxNzFmMWMxNDMzMWU3Njk3NjZjZDU5MTJlZDE1In0.hMrBoiG07WIT407-OQTKzEbIPN-RCePxfdl6MpN1rMs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "content_id",
+							"value": "97",
+							"type": "default"
+						},
+						{
+							"key": "quantity",
+							"value": "2",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/employee/dashboard/add_bill_item/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"employee",
+						"dashboard",
+						"add_bill_item",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Employee Return Bill",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2VtcGxveWVlL2xvZ2luIiwiaWF0IjoxNjgzMzcxMjI0LCJleHAiOjE2ODMzNzQ4MjQsIm5iZiI6MTY4MzM3MTIyNCwianRpIjoiQjFxaHhjN1ZicFJOQzhIaCIsInN1YiI6IjkiLCJwcnYiOiIzMjk2M2E2MDZjMmYxNzFmMWMxNDMzMWU3Njk3NjZjZDU5MTJlZDE1In0.t0PCzTBCPoi0xzbijsUX_HCK6Xxz5Qg7tFKiWQhaYSw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/employee/dashboard/return_bill/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"employee",
+						"dashboard",
+						"return_bill",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Employee Get Bills",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2VtcGxveWVlL2xvZ2luIiwiaWF0IjoxNjgzMzcxMjI0LCJleHAiOjE2ODMzNzQ4MjQsIm5iZiI6MTY4MzM3MTIyNCwianRpIjoiQjFxaHhjN1ZicFJOQzhIaCIsInN1YiI6IjkiLCJwcnYiOiIzMjk2M2E2MDZjMmYxNzFmMWMxNDMzMWU3Njk3NjZjZDU5MTJlZDE1In0.t0PCzTBCPoi0xzbijsUX_HCK6Xxz5Qg7tFKiWQhaYSw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/employee/dashboard/get_bills",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"employee",
+						"dashboard",
+						"get_bills"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Employee Create Report",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/employee/dashboard/make_report/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"employee",
+						"dashboard",
+						"make_report",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
